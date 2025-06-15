@@ -1,0 +1,53 @@
+{
+  "name": "@josephadogeridev/use-results-js",
+  "version": "1.0.0",
+  "description": "Custom react  hook with api function to fetch data abstracting axios configuration",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadogeri/useResults-js.git"
+  },
+  "keywords": [
+    "@josephadogeridev/use-results-js",
+    "hook",
+    "useResults",
+    "react",
+    "react-native",
+    "electron",
+    "reactjs",
+    "electronjs",
+    "@josephadogeridev"
+  ],
+  "author": "Joseph Adogeri",
+  "license": "MIT",
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+  ],
+  "bugs": {
+    "url": "https://github.com/jadogeri/useResults-js/issues"
+  },
+  "homepage": "https://github.com/jadogeri/useResults-js#readme",
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.2",
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react-hooks": "^8.0.1",
+    "jest": "^29.7.0"
+  }
+}
