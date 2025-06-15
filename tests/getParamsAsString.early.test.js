@@ -1,5 +1,5 @@
 
-import { getParamsAsString } from '../getParamsAsString';
+import { getParamsAsString } from '../src/getParamsAsString';
 
 
 // src/getParamsAsString.test.js
