@@ -4,19 +4,17 @@ import { getParamsAsString } from "./src/getParamsAsString.js";
 export default ({baseURL, baseRoute, baseHeaders}) => {
     const [results, setResults] = useState([]);
     const [errorMessage, setErrorMessage] = useState('')
-     const _baseURL = baseURL;
-     const _headers = baseHeaders? baseHeaders : {}
+    const _baseURL = baseURL;
+    const _headers = baseHeaders? baseHeaders : {}
 
     const searchApi = async ({route, params, headers}) => {        
         try {
             const _params = getParamsAsString(params)
 
-               // alert("inside else there is no key ")
             const response =
              await fetch(`${_baseURL}${route}${_params}`,
                            {mode:'cors', 
-                            headers: headers? headers : _headers,
-                            
+                            headers: headers? headers : _headers,                            
                            });
             const data = await response.json();
 
@@ -24,10 +22,6 @@ export default ({baseURL, baseRoute, baseHeaders}) => {
             setErrorMessage('')
 
         } catch (e) {
-            console.log('something went wrong terminal')
-            console.log(e.message)
-
-
             setErrorMessage('something went wrong\nerror message : ' + e.message)
         }
 
