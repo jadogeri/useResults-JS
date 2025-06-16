@@ -5,29 +5,29 @@
 
 ---
 
-## Description
+## Description ##
 
-This is a javascript npm package for reteiving data from api. This react hook abstracts fetch api implementaion.
+This is a javascript npm package for retreiving data from api. This react hook abstracts fetch api implementaion.
 
-## Authors
+## Authors ##
 
 [@jadogeri](https://www.github.com/jadogeri)
 
-## Repository
+## Repository ##
 
  [https://github.com/jadogeri/https://github.com/jadogeri/useResults-JS.git](https://github.com/jadogeri/https://github.com/jadogeri/useResults-JS.git)
 
-## Registory
+## Registory ##
 
 [https://www.npmjs.com/package/@josephadogeridev/use-results-js](https://www.npmjs.com/package/@josephadogeridev/use-results-js)
 
-## Screenshots
+## Screenshots ##
 
 | ![Screenshot 1](assets/images/screenshot1.png) | ![screenshot 2](assets/images/screenshot2.png) |
 | -------------------------------------------- | -------------------------------------------- |
 |                                              |                                              |
 
-## Table of Contents
+## Table of Contents ##
 
 <ul>
       <li><a href="#1-introduction">1. Introduction</a>
@@ -48,8 +48,9 @@ This is a javascript npm package for reteiving data from api. This react hook ab
             <li><a href="#30-install-dependency">3.0 Install Dependency</a> </li>
         <li><a href="#31-initialization">3. Initialization</a> </li>
         <ul>
-            <li><a href="#311-useresults-instance">3.1.1 Test from node_modules</a> </li>
-            <li><a href="#312-searchapi-instance">3.1.2 Test using npm link</a> </li>
+            <li><a href="#310-useresults-hook-call-arguments">3.1.0 Use Results Hook Call Arguments</a> </li>
+            <li><a href="#311-useresults-hook-return-array">3.1.1 Use Results Hook Return Array</a> </li>
+            <li><a href="#312-searchapi-function">3.1.2 Search API Function</a> </li>
         </ul>
             <li><a href="#32-code-snippet">3.2 Code Snippet</a> </li>
         </ul>
@@ -71,28 +72,28 @@ This is a javascript npm package for reteiving data from api. This react hook ab
         </li>
     <ul>
 
-## **1. Introduction**
+## 1. Introduction ##
 
-### **1.1 Purpose**
+### 1.1 Purpose ###
 
-This document outlines the package architecture, components, and design considerations for Get TimeStamp JS package. The goal is to create a timestamp in readable format.
+This document outlines the package architecture, components, and design considerations for Fetching Data from an API. The goal is to create a reusable hook which abstracts Fetch API implementation.
 
-### **1.2 Scope**
+### 1.2 Scope ###
 
 This package will allow users to:
 
-- Create timestamp as string.
-- Resolve undefined and null values as inputs.
-- Render results of timestamp after test.
+- Fetch data (GET) from an api.
+- Allows headers to be set after initialization.
+- results utilize state management.
 
-### **1.3 Intended Audience**
+### 1.3 Intended Audience ###
 
 - Junior or Senior developers.
 - Beginners learning javascript.
 
 ---
 
-### **2. Technology Stack**
+### 2. Technology Stack ##
 
 - **Programming Languages**: Javascript
 - **IDE**: Visual Studio Code (VSCode)
@@ -105,19 +106,19 @@ This package will allow users to:
 
 ---
 
-## **3. Usage**
+## 3. Usage ##
 
-### 3.0 Install Dependency
+### 3.0 Install Dependency ###
 
-1 Type npm install @josephadogeridev/get-timestamp-js to install dependencies.
+1 Type npm install @josephadogeridev/use-results-js to install dependencies.
 
 ```bash
-  npm install @josephadogeridev/get-timestamp-js
+  npm install @josephadogeridev/use-results-js
 ```
 
-### 3.1 Initialization
+### 3.1 Initialization ###
 
-#### 3.1.1 useResults Instance
+#### 3.1.0 useResults Hook Call Arguments ####
 
 | Name        | Type   | Description                                        | Requirement              |
 | ----------- | ------ | -------------------------------------------------- | ------------------------ |
@@ -125,7 +126,16 @@ This package will allow users to:
 | baseRoute   | String | The initial route or path for the api.             | Required                 |
 | baseHeaders | String | The initial headers for the api.                   | Optional, defaults to {} |
 
-#### 3.1.2 searchApi Instance
+#### 3.1.1 useResults Hook Return Array ####
+
+| Name        | Type   | Description                                        | Requirement              |
+| ----------- | ------ | -------------------------------------------------- | ------------------------ |
+| searchApi    | Function | calls the api with argurments. | Required, <i>See <a href="#312-searchapi-function">SearchApi Function</a>for usage</i> .            |
+| results   | Array | The data fetched from the api.             | Required, display data retrieved                |
+| errorMessage | String | Display error returned from the api.                   | Required, debugging |
+
+searchApi, results, errorMessage
+#### 3.1.2 searchApi function ####
 
 | Name    | Type   | Description                                | Requirement              |
 | ------- | ------ | ------------------------------------------ | ------------------------ |
@@ -133,7 +143,7 @@ This package will allow users to:
 | params  | Object | The params appended to query srting.       | Optional, defaults to "" |
 | headers | Object | Sets the headers of the api call .         | Optional, defaults to {} |
 
-### 3.2 Code Snippet
+### 3.2 Code Snippet ###
 
 ```ruby
 
@@ -180,9 +190,9 @@ export default App;
 
 ```
 
-## 4. Tests
+## 4. Tests ##
 
-#### **4.1 Test from node_modules**
+#### 4.1 Test from node_modules ####
 
 note : run test from node_modules after `<a href="#3-usage">` Usage `</a>`
 
@@ -200,7 +210,7 @@ note : run test from node_modules after `<a href="#3-usage">` Usage `</a>`
 
 ![](assets/images/testusingjest.png)
 
-#### **4.2 Test using NPM Link**
+#### 4.2 Test using NPM Link ####
 
 Note : this test was done pre publish to npm manager
 
@@ -256,11 +266,11 @@ export default App;
 
 ```
 
-##### Example
+##### Example #####
 
 ![](assets/images/reactusage.png)
 
-#### **4.3 Test using NPM Pack**
+#### 4.3 Test using NPM Pack ####
 
 Note : this test was done pre publish to npm manager
 
@@ -276,21 +286,21 @@ Note : this test was done pre publish to npm manager
 
 3 Copy and paste the created file in the root of a React Application.
 
-4 Run command npm install @josephadogeridev/use-results-js to install created package.
+4 Run command npm install josephadogeridev-use-results-js-1.0.0.tgz to install created package.
 
 ```bash
-  npm install @josephadogeridev/use-results-js
+  npm install josephadogeridev-use-results-js-1.0.0.tgz
 ```
 
 ![](assets/images/npmpackinstall.png)
 
-## **5. License**
+## 5. License ##
 
 [LICENSE](/LICENSE)
 
 ---
 
-## **6. References**
+## 6. References ##
 
 * FreeCodeCamp : [Frontend Web Development: (HTML, CSS, JavaScript, TypeScript, React)](https://www.youtube.com/watch?v=MsnQ5uepIa).
 * AweSome Open Source : [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
