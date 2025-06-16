@@ -1,3 +1,12 @@
+
+/**
+ * @author      Joseph Adogeri
+ * @since       15-JUN-2025
+ * @version     1.0.0
+ * @description creating hook instance for application
+ *  
+ */
+
 import { useState, useEffect } from "react"
 import { getParamsAsString } from "./src/getParamsAsString.js";
 
