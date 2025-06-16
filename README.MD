@@ -84,7 +84,7 @@ This package will allow users to:
 
 - Fetch data (GET) from an api.
 - Allows headers to be set after initialization.
-- results utilize state management.
+- Results utilize state management.
 
 ### 1.3 Intended Audience ###
 
@@ -123,14 +123,14 @@ This package will allow users to:
 | Name        | Type   | Description                                        | Requirement              |
 | ----------- | ------ | -------------------------------------------------- | ------------------------ |
 | baseURL     | String | The base url for a set of related URLs of the api. | Required                 |
-| baseRoute   | String | The initial route or path for the api.             | Required                 |
-| baseHeaders | String | The initial headers for the api.                   | Optional, defaults to {} |
+| baseRoute   | String | The initial route or path of the api.             | Required                 |
+| baseHeaders | String | The initial headers of the api.                   | Optional, defaults to {} |
 
 #### 3.1.1 useResults Hook Return Array ####
 
 | Name        | Type   | Description                                        | Requirement              |
 | ----------- | ------ | -------------------------------------------------- | ------------------------ |
-| searchApi    | Function | calls the api with argurments. | Required, <i>See <a href="#312-searchapi-function">SearchApi Function</a>for usage</i> .            |
+| searchApi    | Function | calls the api with argurments. | Required, <i>See <a href="#312-searchapi-function">SearchApi Function</a> for usage</i> .            |
 | results   | Array | The data fetched from the api.             | Required, display data retrieved                |
 | errorMessage | String | Display error returned from the api.                   | Required, debugging |
 
@@ -139,7 +139,7 @@ searchApi, results, errorMessage
 
 | Name    | Type   | Description                                | Requirement              |
 | ------- | ------ | ------------------------------------------ | ------------------------ |
-| route   | String | The Inworld Workspace Integration API Key. | Required                 |
+| route   | String | The path to a resource. | Required                 |
 | params  | Object | The params appended to query srting.       | Optional, defaults to "" |
 | headers | Object | Sets the headers of the api call .         | Optional, defaults to {} |
 
