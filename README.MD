@@ -1,4 +1,4 @@
-# **GET TIMESTAMP JS**
+# **USE RESULTS JS**
 
 **Version:** 1.0.0
 **Date:** June 7, 2025
@@ -7,7 +7,7 @@
 
 ## Description
 
-This is a javascript npm package for creating timestamp in readable format.
+This is a javascript npm package for reteiving data from api. This react hook abstracts fetch api implementaion.
 
 ## Authors
 
@@ -15,11 +15,11 @@ This is a javascript npm package for creating timestamp in readable format.
 
 ## Repository
 
- [https://github.com/jadogeri/GetTimeStampJS.git](https://github.com/jadogeri/GetTimeStampJS.git)
+ [https://github.com/jadogeri/https://github.com/jadogeri/useResults-JS.git](https://github.com/jadogeri/https://github.com/jadogeri/useResults-JS.git)
 
 ## Registory
 
-[https://www.npmjs.com/package/@josephadogeridev/get-timestamp-js](https://www.npmjs.com/package/@josephadogeridev/get-timestamp-js)
+[https://www.npmjs.com/package/@josephadogeridev/use-results-js](https://www.npmjs.com/package/@josephadogeridev/use-results-js)
 
 ## Screenshots
 
@@ -102,14 +102,45 @@ This package will allow users to:
 
 ## **3. Usage**
 
-### 3.1 Install Dependency
+### 3.0 Install Dependency
 
 1 Type npm install @josephadogeridev/get-timestamp-js to install dependencies.
 
 ```bash
   npm install @josephadogeridev/get-timestamp-js
 ```
+### 3.1 Initialization ###
 
+#### 3.1.1 useResults Instance ####
+
+
+In web development, a route is a predefined path or pattern within an application that tells the server or router how to respond to specific URLs.
+Routes define which parts of the application's code handle requests for particular URLs or URL patterns.
+For example, a route might specify that requests to "/products" should be handled by a specific controller or function responsible for displaying product information. 
+Header:
+Headers are parts of an HTTP request or response that contain metadata about the request or response.
+
+| Name           | Type    | Description                                                        | Requirement                        |
+| -------------- | ------- | ------------------------------------------------------------------ | ---------------------------------- |
+| baseURL    | String  | The base url for a set of related URLs of the api.                         | Required                           |
+| baseRoute | String  | The initial route or path for the api.                      | Required                           |
+| baseHeaders  | String  | The initial headers for the api.                                             | Optional                          |
+
+
+baseURL, baseRoute, baseHeaders
+
+
+| Name           | Type    | Description                                                        | Requirement                        |
+| -------------- | ------- | ------------------------------------------------------------------ | ---------------------------------- |
+| INWORLD_KEY    | String  | The Inworld Workspace Integration API Key.                         | Required                           |
+| INWORLD_SECRET | String  | The Inworld Workspace Integration API Secret.                      | Required                           |
+| INWORLD_SCENE  | String  | The Inworld Scene ID .                                             | Required                           |
+| PORT           | Number  | The port to run the server on.                                     | Optional, defaults to 4000         |
+| USE_SSL        | Boolean | Set to true if SSL keys are needed.                                | Optional                           |
+| SSL_KEY_NAME   | String  | The name of the SSL key file located in the `keys` folder.         | Required only if USE_SSL is `true` |
+| SSL_CERT_NAME  | String  | The name of the SSL certificate file located in the `keys` folder. | Required only if USE_SSL is `true` |
+| NOENV          | Any     | Use if this service is deployed without an .env file.              | Optional                           |
+route, params, headers
 ### 3.2 Code Snippet
 
 ```ruby
